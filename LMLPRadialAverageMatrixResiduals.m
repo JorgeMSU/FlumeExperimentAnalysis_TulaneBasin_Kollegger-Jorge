@@ -1,16 +1,9 @@
-%%The following code is written to manipulate data from the paper Yu et al
-%%2017 wherein they study autogenic forcings in a deltaic system using a
-%%flume experiment. Here we use the scans performed in their experiment to
-%%observe the dynamics of the fluvial surface as influenced by the allogenic 
-%%factors (sea level). Specifically we look at the signal propogation along the fluvial surface : time lag and dampening.
-%%For each hour of the experiment (of their last phase HMSP)
-%%we calculate the average elevation at three radial distances from the inlet 
-%%: 0.5m, 0.76m, 1.2m. Yu et al use 0.76 and 1.2m in their analysis  and we
-%%include 0.5m  to see the propogation closer to the inlet. We use the
-%%residuals to identify the signals.
-clc
+%% We use this script to calculate the average elevation at three radial distances from the inlet: 0.5m, 0.76m, 1.2m for every hour of the experiment. 
+%% LMLP.mat is the input file that includes the elevation information of the fluvio-deltaic surface. This elevation data was obtained from scans described in Yu et al 2017.
+%% Yu, L., Li, Q., & Straub, K.M. (2017) Scaling the response of deltas to relative-sea-level cycles by autogenic space and time scales: A laboratory study. JSR, 87, 817–837. 
+
 clear all
-load('C:\Users\kolleggerm1\Desktop\LMLP.mat');
+load('C:\LMLP.mat');
 cx=80;%center x
 cy=80;%center y
 
