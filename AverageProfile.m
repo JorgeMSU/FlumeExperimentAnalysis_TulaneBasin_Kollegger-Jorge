@@ -1,22 +1,9 @@
-%%The following code is written to manipulate data from the paper Yu et al
-%%2017 wherein they study autogenic forcings in a deltaic system using a
-%%flume experiment. Here we use the scans performed in their experiment to
-%%observe the dynamics of the fluvial surface as influenced by the allogenic 
-%%factors (sea level). For each hour of the experiment (of their last phase HMSP)
-%%we calculate the average elevation along the profile and generate the profile in cross section. 
-%%We then locate the shoreline at each hour, (Using the curve intersect
-%%function written by S. Hölz, TU Berlin, Germany). For each profile we
-%%calculate the first derivative which we use as a proxy for the relief as a function of the shoreline. 
-%%We then calculate the difference in area of each profile to understand the shape of the profile. 
-%%We also calculate the volume change in each profile, and identify the
-%%change as erosion or deposition and its location along the fluvial
-%%surface. The stratigraphy movie at the bottom uses the shade function (2018 Javier Montalt Tordera).
+%% This script generates Figures 3C and 3D from Kollegger et al. 
 clc
-clear all
-load('C:\Users\kolleggerm1\Dropbox\Madeline&Jorge\Code\ThisisHMSPmatrix.mat')
-% load('C:\Users\kolleggerm1\Desktop\ThisisHMSPmatrix.mat');
-cx=80;%center x
-cy=80;%center y
+close all
+load('C:\Users\lorenzotruej\Dropbox\MergedFoulder_RESEARCH\MontclairStateUniversity\Research\Madeline\Manuscript drafts\Code\Anew.mat')% Use "LMLP" when appropriate
+cx=80;%Inlet x coordinate
+cy=80;%Inlet y coordinate
 
 Anew(isnan(Anew))=0;%make the NaN values zero
 
